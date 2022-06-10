@@ -15,5 +15,7 @@ use App\Http\Controllers\FormController;
 */
 
 Route::get('/', [FormController::class,"index"]);
+Route::post("/data",[FormController::class,"data"]);
+Route::get("/thanks",[FormController::class,"thanks"]);
 
-Route::post("/thanks",[FormController::class,"thanks"]);
+

@@ -12,11 +12,19 @@ class FormController extends Controller
     }
 
 
+    public function data(Request $request){
+
+    $this->validate($request,$rules);
+     $items=$request->all();
+     Person::create($items);
+     return redirect("/thanks");
+    }
+
+
    
-    public function thanks(Request $request){
+    public function thanks(){
     
-    $items=$request->all();
-    Person::create($items);
+   
 
     return view("thanks");
 
